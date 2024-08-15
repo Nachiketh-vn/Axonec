@@ -17,7 +17,6 @@ function navbar() {
      const {
        data: { user },
      } = await supabase.auth.getUser();
-      console.log("id is :",user);
       setuser(user);
     };
 

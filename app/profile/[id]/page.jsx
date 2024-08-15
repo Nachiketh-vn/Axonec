@@ -26,7 +26,6 @@ function Page() {
     const {
       data: { user },
     } = await supabase.auth.getUser();
-    console.log("id is :", user.id);
     setuser(user);
   };
 
@@ -51,13 +50,14 @@ function Page() {
     yop:"",
   });
 
-  const handleInputChange = (e) => {
-    const { id, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: value,
-    }));
-  };
+const handleInputChange = (e) => {
+  const { id, value } = e.target;
+  setFormData((prevData) => ({
+    ...prevData,
+    [id]: value,
+  }));
+};
+
 
   const handleSelectChange = (field, value) => {
     setFormData((prevData) => ({
@@ -228,14 +228,14 @@ function Page() {
           </div>
           <div>
             <Label htmlFor="cy">
-              Current Year (Eductaion){" "}
+              Current Year (Education){" "}
               <span className="text-red-700 text-sm">*</span>
             </Label>
             <Input
               className="bg-black text-white border border-slate-800 rounded-md"
               type="text"
               id="cy"
-              placeholder="current Year"
+              placeholder="Current Year"
               required
               value={formData.cy}
               onChange={handleInputChange}
