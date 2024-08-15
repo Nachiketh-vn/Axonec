@@ -237,7 +237,7 @@ function Page() {
               id="cy"
               placeholder="current Year"
               required
-              value={formData.qualification}
+              value={formData.cy}
               onChange={handleInputChange}
             />
           </div>
@@ -251,7 +251,7 @@ function Page() {
               id="yop"
               placeholder="Year of Passing"
               required
-              value={formData.qualification}
+              value={formData.yop}
               onChange={handleInputChange}
             />
           </div>
