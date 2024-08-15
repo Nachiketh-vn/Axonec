@@ -47,6 +47,8 @@ function Page() {
     qualification: "",
     resumeLink: "",
     referral: "",
+    cy:"",
+    yop:"",
   });
 
   const handleInputChange = (e) => {
@@ -81,6 +83,8 @@ function Page() {
           haq: formData.qualification,
           resume: formData.resumeLink,
           ref: formData.referral,
+          Year_pass: formData.yop,
+          current_year: formData.cy,
         },
       ).eq('id',user.id);
 
@@ -217,6 +221,35 @@ function Page() {
               type="text"
               id="qualification"
               placeholder="Highest Academic Qualification"
+              required
+              value={formData.qualification}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <Label htmlFor="cy">
+              Current Year (Eductaion){" "}
+              <span className="text-red-700 text-sm">*</span>
+            </Label>
+            <Input
+              className="bg-black text-white border border-slate-800 rounded-md"
+              type="text"
+              id="cy"
+              placeholder="current Year"
+              required
+              value={formData.qualification}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <Label htmlFor="yop">
+              Year of Passing <span className="text-red-700 text-sm">*</span>
+            </Label>
+            <Input
+              className="bg-black text-white border border-slate-800 rounded-md"
+              type="text"
+              id="yop"
+              placeholder="Year of Passing"
               required
               value={formData.qualification}
               onChange={handleInputChange}
