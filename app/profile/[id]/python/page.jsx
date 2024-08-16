@@ -269,7 +269,7 @@ const QuizPage = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(20);
 
   useEffect(() => {
     if (timeLeft === 0) {
@@ -283,13 +283,13 @@ const QuizPage = () => {
 
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
-      setScore(score + 1 + timeLeft);
+      setScore(score + 1);
     }
 
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
-      setTimeLeft(30); // Reset timer for next question
+      setTimeLeft(20); // Reset timer for next question
     } else {
       setShowScore(true);
     }

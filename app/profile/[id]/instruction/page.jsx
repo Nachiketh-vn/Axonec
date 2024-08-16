@@ -52,12 +52,6 @@ const InstructionsPage = () => {
         <div className="w-[12vw] h-[15vw] md:w-[8vw] md:h-[5vw] bg-[#F26C2B] rounded-full absolute z-1 left-[40%] translate-x-[-50%] translate-y-[-50%] md:blur-[8.5vw] blur-[12vw]"></div>
         <div className="w-[20vw] h-[25vw] md:w-[15vw] md:h-[12vw] bg-[#F26C2B] rounded-full absolute z-1 left-[65%] translate-x-[-50%] translate-y-[-50%] blur-[15vw]"></div>
       </div>
-      <div className="absolute top-5 left-10 bg-black text-white">
-        <Link href={"/"} className="flex gap-2 items-center">
-          <Image src="/axonec.png" width={35} height={35} alt="Logo" />
-          <h1 className=" text-lg font-bold">Axonec</h1>
-        </Link>
-      </div>
       <div className="bg-gray-900 shadow-lg rounded-lg p-6 md:p-12 w-full max-w-3xl">
         <h1 className="text-3xl font-bold mb-6 text-center text-orange-500">
           Test Instructions
@@ -66,7 +60,7 @@ const InstructionsPage = () => {
         <ul className="list-decimal list-inside space-y-4">
           <li className="text-lg">
             You will have{" "}
-            <span className="font-bold text-orange-500">30 seconds</span> to
+            <span className="font-bold text-orange-500">20 seconds</span> to
             answer each question.
           </li>
           <li className="text-lg">You cannot change your answer once marked</li>

@@ -53,8 +53,8 @@ const tasksData = {
 
 
 const determineLevel = (score) => {
-  if (score >= 500) return "hard";
-  if (score >= 300) return "medium";
+  if (score >= 16) return "hard";
+  if (score >= 11) return "medium";
   return "easy";
 };
 
